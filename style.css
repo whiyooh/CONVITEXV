@@ -44,7 +44,7 @@
   box-shadow: 0 16px 34px rgba(70, 0, 40, 0.28);
 }
 
-.pre-invite-click-area:hover::after {
+.pre-invite-click-area:active::after {
   background: rgba(255, 255, 255, 0.28);
   transform: translateX(-50%) translateY(-2px);
 }
@@ -728,11 +728,14 @@ button {
   box-shadow: 0 16px 34px rgba(70, 0, 40, 0.28);
 }
 
-.pre-invite-click-area:hover::after {
+.pre-invite-click-area:active::after {
   background: rgba(255, 255, 255, 0.28);
   transform: translateX(-50%) translateY(-2px);
 }
 
+.pre-invite-click-area {
+  touch-action: manipulation;
+}
 /* Garante que o vídeo ocupe a tela inteira */
 .screen-video {
   padding: 0;
