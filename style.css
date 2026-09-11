@@ -171,20 +171,15 @@ button {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 86px;
-  height: 86px;
+  width: 85px;
+  height: 85px;
   transform: translate(-50%, -50%);
   z-index: 4;
   border: 0;
-  border-radius: 999px;
-  color: #6e3b08;
+  border-radius: 50%;
+  color: #f3b06e;
   background:
-    radial-gradient(circle at 35% 28%, #fff4b8, transparent 18%),
-    linear-gradient(145deg, #fff0a3 0%, #ffffff 46%, #8a520d 100%);
-  box-shadow:
-    0 18px 42px rgba(0,0,0,0.42),
-    inset 0 2px 10px rgba(255,255,255,0.55),
-    inset 0 -8px 18px rgba(83,44,0,0.24);
+    linear-gradient(145deg, #0f0d00 0%, #000000 46%, #030200 100%);
   transition: var(--transition);
 }
 
