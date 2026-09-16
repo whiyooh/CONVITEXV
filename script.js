@@ -69,7 +69,7 @@ gifts: {
       <div class="modal-actions">
       <a
   class="button combined-video-button"
-  href="video final\Composição 1.mp4"
+  href="video%20final/Composi%C3%A7%C3%A3o%201.mp4"
   target="_blank"
   rel="noopener"
 >
@@ -201,6 +201,10 @@ function closeModal() {
   modalLayer.setAttribute("aria-hidden", "true");
   document.body.style.overflow = "";
   currentModal = null;
+
+  if (document.getElementById("screen-invite")) {
+    goToScreen("screen-invite");
+  }
 
   setTimeout(() => {
     if (!modalLayer.classList.contains("active")) {
