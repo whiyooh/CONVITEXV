@@ -6,7 +6,7 @@ let currentModal = null;
 let isModalTransitioning = false;
 let openingTimer = null;
 
-const VIDEO_FALLBACK_TIME = 8000;
+const VIDEO_FALLBACK_TIME = 30000;
 // Definição dos dados para os modais//
 const modals = {
 manual: {
@@ -27,7 +27,7 @@ manual: {
 gifts: {
     eyebrow: "Festa Fantasia",
     title: "Inscrições para festa fantasia",
-    image: "icon presentes.png",
+    image: "icons/icon presente.png",
     body: `
       <p>Bora garantir sua vaga na festa mais assustadoramente boa do ano? Só seguir aqui:</p>
       <ul>
@@ -60,12 +60,13 @@ gifts: {
   rsvp: {
     eyebrow: "Aperitivos",
     title: "Aperitivos",
-    image: "icon confirma.png",
+    image: "icons/icon confirma.png",
     body: `
-      <p>A mesa desta noite foi pensada para acompanhar o clima da festa. Algumas orientações:
-<l>Aperitivos temáticos serão servidos à luz de velas durante a festa.</l>
-<l>Teremos choop! Beba com moderação,nem todo efeito desaparece com o amanhecer.</l>
-      </p>
+      <p>A mesa desta noite foi pensada para acompanhar o clima da festa.</p>
+      <ul>
+        <li>Aperitivos temáticos serão servidos à luz de velas durante a festa.</li>
+        <li>Teremos choop. Beba com moderação: nem todo efeito desaparece com o amanhecer.</li>
+      </ul>
       <div class="modal-actions">
       <a
   class="button"
@@ -113,6 +114,8 @@ function startOpeningVideo() {
   void progress.offsetWidth;
   progress.classList.add("running");
 
+  syncVideoProgress();
+
   if (openingVideo) {
     openingVideo.currentTime = 0;
     openingVideo.volume = 0.5;
@@ -125,9 +128,19 @@ function startOpeningVideo() {
 
   clearTimeout(openingTimer);
 
-  openingTimer = setTimeout(() => {
-    finishOpeningVideo();
-  }, 8000);
+  if (!openingVideo || !Number.isFinite(openingVideo.duration) || openingVideo.duration <= 0) {
+    openingTimer = setTimeout(finishOpeningVideo, VIDEO_FALLBACK_TIME);
+  }
+}
+
+function syncVideoProgress() {
+  if (!openingVideo) return;
+
+  const duration = openingVideo.duration;
+  if (!Number.isFinite(duration) || duration <= 0) return;
+
+  const progress = document.querySelector(".progress");
+  progress?.style.setProperty("--video-duration", `${duration}s`);
 }
 
 function finishOpeningVideo() {
@@ -140,6 +153,9 @@ function finishOpeningVideo() {
 
   goToScreen("screen-invite");
 }
+
+openingVideo?.addEventListener("loadedmetadata", syncVideoProgress);
+openingVideo?.addEventListener("ended", finishOpeningVideo);
 
 function openModal(type) {
   if (isModalTransitioning) return;
