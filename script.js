@@ -41,7 +41,6 @@ gifts: {
   location: {
     eyebrow: "Festa",
     title: "Localização",
-    image: "icon/locasl.png",
     body: `
       <p><strong>Espaço da Festa</strong></p>
       <p> Aqui mesmo! Na UX Group<br></p>
