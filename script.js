@@ -10,31 +10,30 @@ const VIDEO_FALLBACK_TIME = 8000;
 // Definição dos dados para os modais//
 const modals = {
 manual: {
-  title: "Manual do Convidado",
+  title: "Tudo o que você precisa saber",
   image: "icons/manual (2).png",
   body: `
-    <p>Para manter a festa elegante e dentro da proposta visual da noite, siga estas orientações:</p>
+    <p>Para manter o encanto da noite intacto, siga estas orientações:</p>
 
       <ul>
-        <li>Traje esporte fino.</li>
-        <li>Ajude-nos a manter um ambiente agradável para todos os convidados.</li>
-        <li>Prepare-se para uma noite cheia de carinho, alegria e muitas recordações.</li>
+        <li>Traje casual, com liberdade para toques de fantasia.</li>
+        <li>Ajude-nos a preservar o clima agradável para todos que atravessarem a porta com você.</li>
+        <li>Prepare-se para uma noite de arrepios, boas risadas e recordações.</li>
       </ul>
       
   `
 },
 
 gifts: {
-    eyebrow: "Presentes",
-    title: "Sugestões",
-    image: "https://images.unsplash.com/photo-1512909006721-3d6018887383?auto=format&fit=crop&w=900&q=80",
+    eyebrow: "Festa Fantasia",
+    title: "Inscrições para festa fantasia",
+    image: "icon presentes.png",
     body: `
-      <p>Algumas ideias simples para ajudar na escolha do presente:</p>
+      <p>Bora garantir sua vaga na festa mais assustadoramente boa do ano? Só seguir aqui:</p>
       <ul>
-        <li> Roupas tamanho : M, G</li>
-        <li>Calçado : 36</li>
-        <li>Acessórios e maquiagem.</li>
-        <li>Bolsas e lembrançinhas.</li>
+      <li>Inscreva-se no link: <a href="https://forms.gle/6g7k1Z2v5X8x3V9F9" target="_blank" rel="noopener">https://forms.gle/6g7k1Z2v5X8x3V9F9</a></li>
+        <li>Confirme até dia 25/10 pra não ficar de fora.</li>
+        <li>Seje assustadoramente criativo!</li>
       </ul>
     `
   },
@@ -45,23 +44,28 @@ gifts: {
     image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=80",
     body: `
       <p><strong>Espaço da Festa</strong></p>
-      <p> Buffet Uriel - Estr. dos Pinheiros, 70 - Parque Viana - Barueri<br></p>
+      <p> Aqui mesmo! Na UX Group<br></p>
+      <p> Avenida Juruá, 548, aphaville</p>
+      <p> Teremos um scaperoom no terceiro andar com uma decoração de arrepiar!</p>
+      <p> prepare-se para se divertir e se assustar!</p>
 
       <div class="modal-actions">
-        <a class="button" href="https://www.google.com/maps/search/?api=1&query=Buffet%20Uriel%20Estr.%20dos%20Pinheiros%2070%20Parque%20Viana%20Barueri" target="_blank" rel="noopener">
+        <a class="button" href="https://maps.app.goo.gl/eBpDKjgQDotDuZQo9" target="_blank" rel="noopener">
           Abrir no Google Maps
         </a>
       </div>
     `
   },
-
+/* redirecionamento dos aperitivos  */
   rsvp: {
-    eyebrow: "Confirmação",
-    title: "Confirmar Presença",
-    image: "https://www.espacopuzzle.com.br/blog/img/blog24.webp",
+    eyebrow: "Aperitivos",
+    title: "Aperitivos",
+    image: "icon confirma.png",
     body: `
-      <p>Toque no botão abaixo para confirmar sua presença no 15 anos da Maria Eduarda.</p>
-
+      <p>A mesa desta noite foi pensada para acompanhar o clima da festa. Algumas orientações:
+<l>Aperitivos temáticos serão servidos à luz de velas durante a festa.</l>
+<l>Teremos choop! Beba com moderação,nem todo efeito desaparece com o amanhecer.</l>
+      </p>
       <div class="modal-actions">
       <a
   class="button"
@@ -69,7 +73,7 @@ gifts: {
   target="_blank"
   rel="noopener"
 >
-  Confirmar presença
+  combinado!
 </a>
       </div>
     `

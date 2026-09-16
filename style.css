@@ -120,6 +120,7 @@ button {
   justify-content: stretch;
   background: #061743;
 }
+
 .wax-seal{
   display: flex
   flex-direction: column;
@@ -294,8 +295,8 @@ button {
   align-items: center;
   justify-content: center;
   background:
-    radial-gradient(circle at top, rgba(192, 27, 129, 0.849), transparent 28%),
-    linear-gradient(160deg, #e43a87, #8b022e 56%, #912467);
+    radial-gradient(circle at top, rgba(112, 27, 192, 0.849), transparent 28%),
+    linear-gradient(160deg, #843ae4, #42028b 56%, #572491);
 }
 
 .background-ornaments {
@@ -433,6 +434,12 @@ button {
   font-weight: 900;
   text-transform: uppercase;
   text-shadow: 0 4px 12px rgba(0,0,0,0.28);
+}
+.button {
+position: relative;
+display: flex;
+animation-pulse: pulse 2s infinite;
+
 }
 
 .button {
