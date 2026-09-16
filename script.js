@@ -41,7 +41,7 @@ gifts: {
   location: {
     eyebrow: "Festa",
     title: "Localização",
-    image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=80",
+    image: "icon/locasl.png",
     body: `
       <p><strong>Espaço da Festa</strong></p>
       <p> Aqui mesmo! Na UX Group<br></p>
@@ -69,8 +69,8 @@ gifts: {
       </ul>
       <div class="modal-actions">
       <a
-  class="button"
-  href="https://wa.me/5511969064545?text=Olá!%20Estou%20confirmando%20minha%20presença%20nos%2015%20da%20Maria%20Eduarda!!%20%0A%0ANome:"
+  class="button combined-video-button"
+  href="video final\Composição 1.mp4"
   target="_blank"
   rel="noopener"
 >
