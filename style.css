@@ -811,18 +811,17 @@ width: -8%; height: 0%;
 
 .pre-invite-text {
   position: absolute;
-  margin-top: -10px; 
+  top: 0%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 4;
-
-  width: 67%;
+  width: 50%;
   max-width: 450px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 18px;
+  gap: 8px;
 
   pointer-events: none;
 }
@@ -843,7 +842,7 @@ width: -8%; height: 0%;
 
 .text-img-2 {
   width: 100%;
-  margin-top: -01px;
+  margin-top: -12px;
   animation: subtitleEnter 1s ease forwards 0.75s;
 }
 
@@ -859,6 +858,8 @@ width: -8%; height: 0%;
   background: transparent;
   cursor: pointer;
 }
+
+
 
 .pre-invite-click-area::after {
   content: "ABRIR PORTAL";
