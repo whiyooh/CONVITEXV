@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aperitivos | UX DARK NIGHT</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: Georgia, "Times New Roman", serif;
+      background: #08020c;
+      color: #fff7fb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(14, 2, 20, 0.24), rgba(5, 0, 9, 0.72)),
+        radial-gradient(circle at 50% 18%, rgba(216, 76, 255, 0.26), transparent 34%),
+        #08020c;
+    }
+
+    .video-page {
+      width: min(100%, 760px);
+      min-height: 100vh;
+      padding: 24px 18px;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      gap: 18px;
+      place-items: center;
+    }
+
+    .close-button {
+      justify-self: end;
+      min-width: 96px;
+      min-height: 42px;
+      padding: 0 18px;
+      border: 1px solid rgba(255, 255, 255, 0.62);
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+      font: 800 0.82rem/1 Arial, sans-serif;
+      cursor: pointer;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .close-button:hover,
+    .close-button:focus-visible {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: #fff;
+      outline: none;
+    }
+
+    .video-frame {
+      width: min(100%, 680px);
+      max-height: calc(100vh - 110px);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.38);
+      border-radius: 18px;
+      background: #000;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.42);
+    }
+
+    video {
+      display: block;
+      width: 100%;
+      max-height: calc(100vh - 110px);
+      object-fit: contain;
+    }
+
+    @media (max-width: 480px) {
+      .video-page {
+        padding: 16px 12px;
+        gap: 12px;
+      }
+
+      .close-button {
+        min-height: 38px;
+        min-width: 88px;
+      }
+
+      .video-frame,
+      video {
+        max-height: calc(100vh - 82px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="video-page">
+    <button class="close-button" type="button" onclick="goBack()">Fechar</button>
+
+    <div class="video-frame">
+      <video controls autoplay playsinline>
+        <source src="video final/Composição 1.mp4" type="video/mp4" />
+        Seu navegador nao conseguiu carregar o video.
+      </video>
+    </div>
+  </main>
+
+  <script>
+    function goBack() {
+      window.location.href = "index.html#screen-invite";
+    }
+  </script>
+</body>
+</html>

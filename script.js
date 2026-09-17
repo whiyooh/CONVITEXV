@@ -69,7 +69,7 @@ gifts: {
       <div class="modal-actions">
       <a
   class="button combined-video-button"
-  href="video%20final/Composi%C3%A7%C3%A3o%201.mp4"
+  href="aperitivos.html"
   target="_blank"
   rel="noopener"
 >
@@ -90,6 +90,10 @@ function goToScreen(screenId) {
   if (target) {
     target.classList.add("active");
   }
+}
+
+if (window.location.hash === "#screen-invite") {
+  goToScreen("screen-invite");
 }
 
 function openPrintedEnvelope() {
@@ -222,7 +226,7 @@ function confirmPresence() {
     <div class="confirmed-state">
       <div class="confirmed-symbol">✓</div>
       <h2 id="modal-title">Presença confirmada</h2>
-      <p>Sua presença foi confirmada com sucesso. Maria Eduarda ficará muito feliz em receber você.</p>
+
 
       <div class="modal-actions">
         <button class="button" type="button" onclick="closeModal()">
