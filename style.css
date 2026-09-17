@@ -112,6 +112,7 @@ button {
 
 .screen {
   min-height: 100vh;
+  min-height: 100dvh;
   display: none;
   position: relative;
   padding: 28px 22px;
@@ -689,6 +690,43 @@ animation: pulse 2s infinite;
   }
 }
 
+@media (max-width: 480px) {
+  .screen {
+    padding: 18px 14px;
+  }
+
+  .pre-invite-text {
+    top: 7vh;
+    width: min(76vw, 340px);
+    gap: 4px;
+  }
+
+  .pre-invite-click-area::after {
+    bottom: 64px;
+    min-width: 160px;
+    padding: 12px 18px;
+    font-size: 0.82rem;
+  }
+
+  .invite-card {
+    padding: 20px 14px;
+  }
+
+  .intro-text {
+    max-width: 250px;
+    font-size: 0.92rem;
+  }
+
+  .action-grid {
+    gap: 10px;
+  }
+
+  .action-card,
+  .action-card img {
+    min-height: 120px;
+  }
+}
+
 @media (max-width: 360px) {
   .action-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -811,17 +849,17 @@ width: -8%; height: 0%;
 
 .pre-invite-text {
   position: absolute;
-  top: 0%;
+  top: 5vh;
   left: 50%;
   transform: translateX(-50%);
   z-index: 4;
-  width: 50%;
+  width: min(72vw, 380px);
   max-width: 450px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 
   pointer-events: none;
 }
@@ -842,7 +880,7 @@ width: -8%; height: 0%;
 
 .text-img-2 {
   width: 100%;
-  margin-top: -12px;
+  margin-top: -6px;
   animation: subtitleEnter 1s ease forwards 0.75s;
 }
 
