@@ -191,7 +191,7 @@ function openModal(type) {
 
   modalLayer.classList.add("active");
   modalLayer.setAttribute("aria-hidden", "false");
-  document.body.style.overflow = "hidden";
+  document.body.classList.add("modal-open");
 
   setTimeout(() => {
     isModalTransitioning = false;
@@ -203,7 +203,7 @@ function closeModal() {
 
   modalLayer.classList.remove("active");
   modalLayer.setAttribute("aria-hidden", "true");
-  document.body.style.overflow = "";
+  document.body.classList.remove("modal-open");
   currentModal = null;
 
   if (document.getElementById("screen-invite")) {

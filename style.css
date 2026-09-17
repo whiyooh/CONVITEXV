@@ -85,10 +85,16 @@ html {
 
 body {
   min-height: 100vh;
+  min-height: 100dvh;
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: var(--white);
   overflow-x: hidden;
   background: linear-gradient(180deg, #26052c 0%, #420a49 100%);
+}
+
+body.modal-open {
+  overflow: hidden;
+  overscroll-behavior: contain;
 }
 
 button,
@@ -481,11 +487,18 @@ animation: pulse 2s infinite;
 .modal-layer {
   position: fixed;
   inset: 0;
-  z-index: 50; 
+  z-index: 50;
   display: none;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-  padding: 18px;
+  padding:
+    max(16px, env(safe-area-inset-top))
+    max(16px, env(safe-area-inset-right))
+    max(16px, env(safe-area-inset-bottom))
+    max(16px, env(safe-area-inset-left));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }
 
 .modal-layer.active {
@@ -501,11 +514,16 @@ animation: pulse 2s infinite;
 }
 
 .modal-card {
-  width: min(100%, 420px);
-  max-height: min(86vh, 720px);
-  overflow: auto;
   position: relative;
   z-index: 1;
+  width: min(100%, 420px);
+  max-width: 420px;
+  max-height: calc(100dvh - 32px);
+  max-height: calc(100svh - 32px);
+  min-height: 0;
+  flex-shrink: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
   padding: 0;
   border-radius: 34px;
   color: var(--text-dark);
@@ -1839,7 +1857,7 @@ width: -8%; height: 0%;
 }
 
 .action-card img {
-  position: absolute;
+  position: flex;
   inset: 0;
   width: 100%;
   height: 100%;
