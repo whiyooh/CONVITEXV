@@ -1653,7 +1653,7 @@ width: -8%; height: 0%;
   isolation: isolate;
   background:
     linear-gradient(90deg, rgba(5, 1, 13, 0.08), rgba(5, 1, 13, 0.38)),
-    url("imgs/CAPA.png") center / cover no-repeat;
+    url("./imgs/CAPA.webp") center / cover no-repeat;
 }
 
 .envelope-panel {
